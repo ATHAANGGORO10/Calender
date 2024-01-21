@@ -1,7 +1,7 @@
 :root {
     --text-color: #333;
     --active-color: #fff;
-    --inactive-color: #aaa;
+    --inactive-color: #ff0000;
     --hover-color: #f2f2f2;
     --main-bg-color: #8c2ce6;
     --shadow-color: #0000001f;
@@ -22,14 +22,15 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: var(--active-bg-color);
+    background: var(--text-color);
 }
 
 .wrapper {
     width: 450px;
-    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 15px 40px var(--shadow-color);
+    backdrop-filter: blur(100px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 .wrapper header {
@@ -48,12 +49,12 @@ header .icons span {
     height: 38px;
     margin: 0 1px;
     cursor: pointer;
-    color: #878787;
     font-size: 1.9rem;
     line-height: 38px;
     user-select: none;
     border-radius: 50%;
     text-align: center;
+    color: var(--main-bg-color);
 }
 
 .icons span:last-child {
@@ -61,7 +62,7 @@ header .icons span {
 }
 
 header .icons span:hover {
-    background: #f2f2f2;
+    background: var(--hover-color);
 }
 
 header .current-date {
@@ -103,11 +104,11 @@ header .current-date {
 }
 
 .days li.inactive {
-    color: #aaa;
+    color: var(--inactive-color);
 }
 
 .days li.active {
-    color: #fff;
+    color: var(--active-color);
 }
 
 .days li::before {
