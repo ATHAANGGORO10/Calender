@@ -27,10 +27,8 @@ body {
 
 .wrapper {
     width: 450px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.656);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 5px;
+    background-color: var(--hover-color);
 }
 
 .wrapper header {
@@ -129,4 +127,33 @@ header .current-date {
 
 .days li:not(.active):hover::before {
     background: var(--hover-color);
+}
+
+#notepad {
+    width: 100%;
+    resize: none;
+    border: none;
+    height: 130px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: var(--active-color);
+}
+
+#removeBtn {
+    width: 100%;
+    border: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    color: var(--active-color);
+    background-color: var(--main-bg-color);
+}
+
+#removeBtn:hover {
+    background-color: var(--active-bg-color);
 }
