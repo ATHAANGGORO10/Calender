@@ -1,9 +1,9 @@
 :root {
     --text-color: #333;
     --active-color: #fff;
-    --inactive-color: #ff0000;
     --hover-color: #f2f2f2;
     --main-bg-color: #8c2ce6;
+    --inactive-color: #ff0000;
     --shadow-color: #0000001f;
     --active-bg-color: #9B59B6;
     --secondary-bg-color: #faf6f6;
@@ -28,8 +28,8 @@ body {
 .wrapper {
     width: 450px;
     border-radius: 10px;
-    backdrop-filter: blur(100px) saturate(180%);
-    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.656);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
