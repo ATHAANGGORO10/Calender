@@ -1,0 +1,131 @@
+:root {
+    --text-color: #333;
+    --active-color: #fff;
+    --inactive-color: #aaa;
+    --hover-color: #f2f2f2;
+    --main-bg-color: #8c2ce6;
+    --shadow-color: #0000001f;
+    --active-bg-color: #9B59B6;
+    --secondary-bg-color: #faf6f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: var(--active-bg-color);
+}
+
+.wrapper {
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px var(--shadow-color);
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+header .icons {
+    display: flex;
+}
+
+header .icons span {
+    width: 38px;
+    height: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    font-size: 1.9rem;
+    line-height: 38px;
+    user-select: none;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.icons span:last-child {
+    margin-right: -10px;
+}
+
+header .icons span:hover {
+    background: #f2f2f2;
+}
+
+header .current-date {
+    font-weight: 500;
+    font-size: 1.45rem;
+}
+
+.calendar {
+    padding: 20px;
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.calendar .days {
+    margin-bottom: 20px;
+}
+
+.calendar li {
+    font-size: 1.07rem;
+    width: calc(100% / 7);
+    color: var(--text-color);
+}
+
+.calendar .weeks li {
+    font-weight: 500;
+    cursor: default;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.days li::before {
+    top: 50%;
+    left: 50%;
+    content: "";
+    width: 40px;
+    z-index: -1;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+    background: var(--active-bg-color);
+}
+
+.days li:not(.active):hover::before {
+    background: var(--hover-color);
+}
